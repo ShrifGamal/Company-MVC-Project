@@ -1,0 +1,25 @@
+﻿@model RoleViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<h1>Edit User Page</h1>
+<br />
+<br />
+
+<form asp-action="Edit">
+
+    <partial name="RolePartialViews/EditCreateRolePartialView" model="@Model" />
+    <br />
+
+    <a asp-action="AddOrRemoveUser" asp-route-RoleId ="@Model.Id" class="btn btn-success">Add Or Remove User</a>
+
+    <input type="submit" value="Save" class="btn btn-primary" />
+    <a  asp-action="Index" class="btn btn-light">Back To List</a>
+</form>
+
+@section Hamada{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+}
